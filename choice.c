@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Mon Dec 21 15:00:48 2015 paul wery
-** Last update Wed Dec 23 00:40:23 2015 paul wery
+** Last update Wed Dec 23 01:16:43 2015 paul wery
 */
 
 #include <lapin.h>
@@ -103,9 +103,9 @@ float	cal_k(t_co *co, t_ini *i, float vx, float vy)
   float	k;
 
   if (vx != 0)
-    k = (co[i->x].x - i->save1) / vx;
+    k = (co[i->x].x - i->start_pos_x) / vx;
   else
-    k = (co[i->x].y - i->save2) / vy;
+    k = (co[i->x].y - i->start_pos_y) / vy;
   if (k < 0)
     k = k * -1;
   return (k);
