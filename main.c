@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Sat Dec 12 03:12:30 2015 paul wery
-** Last update Wed Dec 23 00:44:36 2015 paul wery
+** Last update Wed Dec 23 14:01:08 2015 paul wery
 */
 
 #include <unistd.h>
@@ -62,11 +62,16 @@ t_bunny_response	loop(void *data)
   return (GO_ON);
 }
 
-void	start_pos(t_ini *i)
+void		start_pos(t_ini *i)
 {
-  i->start_pos_x = 1;
-  i->start_pos_y = 1;
-  i->start_angle = 0;
+  const char	*object;
+
+  object = bunny_ini_get_field(i->ini, "level1", "start_position", 0);
+  i->start_pos_x = get_nb(object);
+  object = bunny_ini_get_field(i->ini, "level1", "start_position", 1);
+  i->start_pos_y = get_nb(object);
+  object = bunny_ini_get_field(i->ini, "level1", "start_position", 2);
+  i->start_angle = get_nb(object);
 }
 
 int			main(int ac, char **av)
@@ -77,9 +82,9 @@ int			main(int ac, char **av)
     {
       i.win = bunny_start(SIZE_WINL, SIZE_WINH, false, "Wolf_3D");
       i.pix = bunny_new_pixelarray(SIZE_WINL, SIZE_WINH);
-      start_pos(&i);
       if ((i.ini = bunny_load_ini(av[1])) == NULL)
         return (-1);
+      start_pos(&i);
       bunny_set_loop_main_function(loop);
       bunny_set_key_response(escp);
       bunny_loop(i.win, 0, &i);

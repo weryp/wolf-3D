@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Sun Dec 20 20:04:44 2015 paul wery
-** Last update Wed Dec 23 01:12:30 2015 paul wery
+** Last update Wed Dec 23 01:34:43 2015 paul wery
 */
 
 #include <lapin.h>
@@ -24,7 +24,7 @@ void		aff_earth(t_ini *i)
       ad = (unsigned long)i->pix->pixels;
       color = (t_color*)ad;
       color = color + n;
-      color->full = 0xFF003366;
+      color->full = 0xFF000000;
       n = n - 1;
     }
 }
