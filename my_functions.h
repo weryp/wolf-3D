@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Sat Dec 19 17:44:28 2015 paul wery
-** Last update Wed Dec 23 00:40:09 2015 paul wery
+** Last update Fri Dec 25 15:17:33 2015 paul wery
 */
 
 #include <lapin.h>
@@ -21,7 +21,7 @@ void            win_initialize(t_bunny_pixelarray *pix);
 void            start_loading(t_ini *ini, t_ini *i);
 int		get_nb(const char *buffer);
 void            first_part(int *map, t_ini *i);
-void		build_wall(t_ini *i, float add);
+void		build_wall(t_ini *i, float add, t_co *co);
 void            tekpixel(t_bunny_pixelarray *pix,
                          t_bunny_position *pos,
                          t_color *color);

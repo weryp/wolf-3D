@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Sat Dec 19 18:18:35 2015 paul wery
-** Last update Wed Dec 23 00:56:48 2015 paul wery
+** Last update Fri Dec 25 15:17:01 2015 paul wery
 */
 
 #include <lapin.h>
@@ -73,7 +73,7 @@ void	find_wall(int *map, t_co *co, t_ini *i)
       k = cal_k(co, i, i->vx, i->vy);
       if (k == 0)
 	k = 1;
-      build_wall(i, k);
+      build_wall(i, k, co);
       i->x += 1;
     }
 }
