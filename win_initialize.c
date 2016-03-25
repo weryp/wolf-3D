@@ -5,11 +5,10 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Wed Nov  4 01:08:26 2015 paul wery
-** Last update Mon Dec 21 01:03:26 2015 paul wery
+** Last update Thu Jan  7 23:12:11 2016 paul wery
 */
 
 #include <lapin.h>
-#include <stdio.h>
 
 void		win_initialize(t_bunny_pixelarray *pix)
 {

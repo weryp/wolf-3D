@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Mon Nov 16 14:27:51 2015 paul wery
-** Last update Mon Dec 21 14:13:17 2015 paul wery
+** Last update Thu Jan  7 23:07:30 2016 paul wery
 */
 
 #include <lapin.h>
@@ -19,8 +19,8 @@ void		tekpixel(t_bunny_pixelarray *pix,
   unsigned long	ad;
   int		i;
 
-  if (pos->x > 0 && pos->x < SIZE_WINL)
-    if (pos->y >0 && pos->y < SIZE_WINH)
+  if (pos->x >= 0 && pos->x < SIZE_WINL)
+    if (pos->y >= 0 && pos->y < SIZE_WINH)
       {
 	i = pos->x + (pos->y * pix->clipable.clip_width);
 	ad = (unsigned long)pix->pixels;

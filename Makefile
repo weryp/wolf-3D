@@ -5,20 +5,23 @@
 ## Login   <wery_p@epitech.net>
 ##
 ## Started on  Thu Nov 19 00:44:55 2015 paul wery
-## Last update Wed Dec 23 00:39:23 2015 paul wery
+## Last update Mon Jan 11 19:37:56 2016 paul wery
 ##
 
 NAME    =	wolf3d
 
 RM      =	rm -f
 
-CC	=	gcc -W -Wall -Werror -ansi -pedantic
+CC	=	gcc
+
+CFLAGS	=	-W -Wall -Werror -ansi -pedantic
 
 OBJS    =	$(SRCS:.c=.o)
 
 SRCS    =	main.c \
 		loading_file.c \
 		first_part.c \
+		ini_val.c \
 		choice.c \
 		build_wall.c \
 		tekpixel.c \

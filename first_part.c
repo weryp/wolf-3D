@@ -5,7 +5,7 @@
 ** Login   <wery_p@epitech.net>
 **
 ** Started on  Sat Dec 19 18:18:35 2015 paul wery
-** Last update Fri Dec 25 15:17:01 2015 paul wery
+** Last update Fri Dec 25 20:35:10 2015 paul wery
 */
 
 #include <lapin.h>
@@ -60,10 +60,7 @@ void	find_wall(int *map, t_co *co, t_ini *i)
   i->x = 0;
   while (i->x <= SIZE_WINL)
     {
-      i->vx = co[i->x].x - i->start_pos_x;
-      i->vy = co[i->x].y - i->start_pos_y;
-      i->save1 = co[i->x].x;
-      i->save2 = co[i->x].y;
+      ini_val(co, i);
       while (check_end(map, co, i) == 0)
       	{
 	  k = best_choice(co, i->vx, i->vy, i);
@@ -73,7 +70,7 @@ void	find_wall(int *map, t_co *co, t_ini *i)
       k = cal_k(co, i, i->vx, i->vy);
       if (k == 0)
 	k = 1;
-      build_wall(i, k, co);
+      build_wall(i, k);
       i->x += 1;
     }
 }
